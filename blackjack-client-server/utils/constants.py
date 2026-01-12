@@ -1,4 +1,4 @@
-# protocol/constants.py
+# utils/constants.py
 
 MAGIC_COOKIE = 0xabcddcba
 

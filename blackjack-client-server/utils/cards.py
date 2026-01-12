@@ -1,4 +1,4 @@
-# protocol/cards.py
+# utils/cards.py
 import random
 from dataclasses import dataclass
 

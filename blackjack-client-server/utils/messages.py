@@ -1,8 +1,8 @@
-# protocol/messages.py
+# utils/messages.py
 import struct
 from dataclasses import dataclass
 
-from constants import ( 
+from utils.constants import ( 
     MAGIC_COOKIE,
     MSG_OFFER, MSG_REQUEST, MSG_PAYLOAD,
     NAME_LEN, DECISION_LEN, CARD_LEN

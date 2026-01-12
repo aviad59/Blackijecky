@@ -1,8 +1,8 @@
 # client/client.py
 import socket
 
-from constants import UDP_OFFER_PORT
-from messages import (
+from utils.constants import UDP_OFFER_PORT
+from utils.messages import (
     unpack_offer,
     pack_request,
     PAYLOAD_LEN,
@@ -28,7 +28,14 @@ def update_stats(result: int, wins: int, losses: int, ties: int):
 def main():
     # UDP socket created once, client runs forever
     udp_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-    udp_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+    
+    # uncomment for mac/linux
+    # udp_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+
+    # comment for mac/linux
+    udp_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR , 1)
+
+
     udp_sock.bind(("", UDP_OFFER_PORT))
 
     print("Client started, listening for offer requests...")

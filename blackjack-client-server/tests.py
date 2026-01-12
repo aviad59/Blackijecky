@@ -1,5 +1,5 @@
-# protocol/self_test.py
-from messages import (
+# protocol/tests.py
+from utils.messages import (
     pack_offer, unpack_offer,
     pack_request, unpack_request,
     pack_payload_client, unpack_payload,
@@ -10,8 +10,8 @@ def main():
     o = unpack_offer(pack_offer(5555, "MyServer"))
     assert o.tcp_port == 5555 and o.server_name == "MyServer"
 
-    r = unpack_request(pack_request(7, "SoloTeam"))
-    assert r.rounds == 7 and r.team_name == "SoloTeam"
+    r = unpack_request(pack_request(7, "Team66"))
+    assert r.rounds == 7 and r.team_name == "Team66"
 
     p = unpack_payload(pack_payload_client("Hittt"))
     assert p.decision.startswith(b"Hittt")

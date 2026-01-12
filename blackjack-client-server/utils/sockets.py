@@ -1,4 +1,4 @@
-# sockets.py
+# utils/sockets.py
 
 def recv_exact(sock, n: int) -> bytes:
     """Receive exactly n bytes from a TCP socket or raise ConnectionError."""

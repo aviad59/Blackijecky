@@ -3,17 +3,10 @@ import socket
 import threading
 import time
 
-from constants import UDP_OFFER_PORT, OFFER_INTERVAL_SEC
-from messages import pack_offer, unpack_request
-from messages import REQUEST_LEN
+from utils.constants import UDP_OFFER_PORT, OFFER_INTERVAL_SEC, RESULT_NOT_OVER, RESULT_LOSS, RESULT_WIN, RESULT_TIE
 from utils.sockets import recv_exact
-from cards import Deck
-from messages import PAYLOAD_LEN, pack_payload_server
-from cards import card_value
-from messages import unpack_payload
-from constants import RESULT_NOT_OVER, RESULT_LOSS, RESULT_WIN, RESULT_TIE
-
-
+from utils.cards import Deck, card_value
+from utils.messages import PAYLOAD_LEN, pack_payload_server, unpack_payload, REQUEST_LEN, pack_offer, unpack_request
 
 
 TEAM_NAME = "BlackCrown_ormoa"
