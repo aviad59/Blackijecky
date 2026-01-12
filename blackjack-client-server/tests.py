@@ -1,4 +1,4 @@
-# protocol/tests.py
+# tests.py
 from utils.messages import (
     pack_offer, unpack_offer,
     pack_request, unpack_request,

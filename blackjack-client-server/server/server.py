@@ -141,7 +141,6 @@ def handle_client(conn: socket.socket, addr):
                     break
 
                 else:
-                    # החלטה לא תקינה -> נסיים חיבור/round
                     print(f"Invalid decision from client: {decision!r}")
                     conn.sendall(pack_payload_server(RESULT_LOSS, 0, 0))
                     break

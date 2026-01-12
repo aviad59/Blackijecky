@@ -29,6 +29,6 @@ class Deck:
 
     def draw(self) -> Card:
         if not self.cards:
-            # אם נגמר (לא אמור לקרות בסשן קטן), יוצרים מחדש
+            # generete new if empty
             self.__init__()
         return self.cards.pop()

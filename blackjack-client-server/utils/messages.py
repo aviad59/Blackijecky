@@ -9,7 +9,7 @@ from utils.constants import (
 )
 
 # Network byte order (!)
-OFFER_FMT = "!IBH32s"        # cookie(4) type(1 as B but packed in I? Actually I=4, B=1) -> use: I B H 32s
+OFFER_FMT = "!IBH32s"        # cookie(4) use: I B H 32s
 REQUEST_FMT = "!IBB32s"      # cookie, type, rounds, name
 PAYLOAD_FMT = "!IB5sB3s"     # cookie, type, decision(5), result(1), card(3)
 CARD_FMT = "!HB"             # rank(2), suit(1) => total 3 bytes
@@ -42,7 +42,7 @@ class Request:
 
 @dataclass
 class Payload:
-    decision: bytes  # exactly 5 bytes, e.g. b"Hittt" or b"Stand" (client->server)
+    decision: bytes  # exactly 5 bytess
     result: int      # 0/1/2/3 (server->client)
     card_rank: int   # 0 if none
     card_suit: int   # 0..3 (HDCS) ; 0 if none
