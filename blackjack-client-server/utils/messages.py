@@ -2,7 +2,7 @@
 import struct
 from dataclasses import dataclass
 
-from protocol.constants import (
+from constants import ( 
     MAGIC_COOKIE,
     MSG_OFFER, MSG_REQUEST, MSG_PAYLOAD,
     NAME_LEN, DECISION_LEN, CARD_LEN

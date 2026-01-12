@@ -3,15 +3,15 @@ import socket
 import threading
 import time
 
-from protocol.constants import UDP_OFFER_PORT, OFFER_INTERVAL_SEC
-from protocol.messages import pack_offer, unpack_request
-from protocol.messages import REQUEST_LEN
+from constants import UDP_OFFER_PORT, OFFER_INTERVAL_SEC
+from messages import pack_offer, unpack_request
+from messages import REQUEST_LEN
 from utils.sockets import recv_exact
-from protocol.cards import Deck
-from protocol.messages import PAYLOAD_LEN, pack_payload_server
-from protocol.cards import card_value
-from protocol.messages import unpack_payload
-from protocol.constants import RESULT_NOT_OVER, RESULT_LOSS, RESULT_WIN, RESULT_TIE
+from cards import Deck
+from messages import PAYLOAD_LEN, pack_payload_server
+from cards import card_value
+from messages import unpack_payload
+from constants import RESULT_NOT_OVER, RESULT_LOSS, RESULT_WIN, RESULT_TIE
 
 
 

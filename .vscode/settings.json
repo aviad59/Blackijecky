@@ -1,0 +1,3 @@
+{
+  "python.analysis.extraPaths": ["./blackjack-client-server/utils"]
+}

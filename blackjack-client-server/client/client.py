@@ -1,8 +1,8 @@
 # client/client.py
 import socket
 
-from protocol.constants import UDP_OFFER_PORT
-from protocol.messages import (
+from constants import UDP_OFFER_PORT
+from messages import (
     unpack_offer,
     pack_request,
     PAYLOAD_LEN,

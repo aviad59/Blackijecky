@@ -1,5 +1,5 @@
 # protocol/self_test.py
-from protocol.messages import (
+from messages import (
     pack_offer, unpack_offer,
     pack_request, unpack_request,
     pack_payload_client, unpack_payload,
